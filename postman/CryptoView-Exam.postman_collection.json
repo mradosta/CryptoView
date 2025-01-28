@@ -1,0 +1,159 @@
+{
+	"info": {
+		"_postman_id": "a66830e1-ddf3-4ce7-8803-2737e0219651",
+		"name": "CryptoView-Exam",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "684128"
+	},
+	"item": [
+		{
+			"name": "1. NFT Metadata Retrieval and Storage",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5173/api/tokens/nft-metadata/0x7ee32b8B515dEE0Ba2F25f612A04a731eEc24F49/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5173",
+					"path": [
+						"api",
+						"tokens",
+						"nft-metadata",
+						"0x7ee32b8B515dEE0Ba2F25f612A04a731eEc24F49",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2. Simple Cryptocurrency Transaction Tracking:",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5173/api/eth-transactions/0xbd3531da5cf5857e7cfaa92426877b022e612cf8/2025-01-26/2025-01-27",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5173",
+					"path": [
+						"api",
+						"eth-transactions",
+						"0xbd3531da5cf5857e7cfaa92426877b022e612cf8",
+						"2025-01-26",
+						"2025-01-27"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3. Decentralized Storage (IPFS Integration) - WRITE",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"name\": \"file1\", \"content\": \"hello word 1\" }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5173/api/ipfs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5173",
+					"path": [
+						"api",
+						"ipfs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3.1. Decentralized Storage (IPFS Integration) - READ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5173/api/ipfs/name",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5173",
+					"path": [
+						"api",
+						"ipfs",
+						"name"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4. Token Balance Lookup",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5173/api/tokens/balance/0xBBd3EDd4D3b519c0d14965d9311185CFaC8c3220/0xC1a4aD3AaC062d875A9395B041ef5E4885BB8F9c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5173",
+					"path": [
+						"api",
+						"tokens",
+						"balance",
+						"0xBBd3EDd4D3b519c0d14965d9311185CFaC8c3220",
+						"0xC1a4aD3AaC062d875A9395B041ef5E4885BB8F9c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5. Basic Smart Contract Interaction",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"walletAddressTo\": \"0x8065D9ce7dd72FB0402FdB31854FD35e7E6BEEF5\", \"amount\": 0.01 }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5173/api/tokens/transfer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5173",
+					"path": [
+						"api",
+						"tokens",
+						"transfer"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
