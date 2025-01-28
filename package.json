@@ -7,6 +7,9 @@
     "dev": "concurrently \"vite\" \"nodemon ./server/server.js\""
   },
   "dependencies": {
+    "@helia/core": "^0.0.0",
+    "@helia/strings": "^4.0.2",
+    "@helia/unixfs": "^4.0.2",
     "@hookform/resolvers": "^3.3.4",
     "@radix-ui/react-dialog": "^1.0.5",
     "@radix-ui/react-label": "^2.0.2",
@@ -25,10 +28,13 @@
     "execp": "^0.0.1",
     "express": "^4.19.2",
     "fs": "^0.0.1-security",
+    "helia": "^5.2.0",
+    "ipfs-core": "^0.18.1",
     "jsonwebtoken": "^9.0.2",
     "localforage": "^1.10.0",
     "lucide-react": "^0.356.0",
     "match-sorter": "^6.3.4",
+    "moment": "^2.30.1",
     "mongodb": "^6.5.0",
     "mongoose": "^8.3.2",
     "path": "^0.12.7",
@@ -60,7 +66,7 @@
     "eslint-plugin-react": "^7.34.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
-    "nodemon": "^3.1.4",
+    "nodemon": "^3.1.9",
     "postcss": "^8.4.35",
     "tailwindcss": "^3.4.1",
     "vite": "^5.1.6"
